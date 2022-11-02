@@ -1,3 +1,6 @@
 export const environment = {
-  production: true
+  production: true,
+  environment: {
+    domain: "https://shawandpartners-murilo-front.herokuapp.com/"
+  },
 };
