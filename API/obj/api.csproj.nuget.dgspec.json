@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\musou\\OneDrive\\Documents\\BitBucket\\testapplication\\api\\api.csproj": {}
+    "C:\\Users\\musou\\OneDrive\\Documents\\BitBucket\\testapplication\\API\\api.csproj": {}
   },
   "projects": {
-    "C:\\Users\\musou\\OneDrive\\Documents\\BitBucket\\testapplication\\api\\api.csproj": {
+    "C:\\Users\\musou\\OneDrive\\Documents\\BitBucket\\testapplication\\API\\api.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\musou\\OneDrive\\Documents\\BitBucket\\testapplication\\api\\api.csproj",
+        "projectUniqueName": "C:\\Users\\musou\\OneDrive\\Documents\\BitBucket\\testapplication\\API\\api.csproj",
         "projectName": "api",
-        "projectPath": "C:\\Users\\musou\\OneDrive\\Documents\\BitBucket\\testapplication\\api\\api.csproj",
+        "projectPath": "C:\\Users\\musou\\OneDrive\\Documents\\BitBucket\\testapplication\\API\\api.csproj",
         "packagesPath": "C:\\Users\\musou\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\musou\\OneDrive\\Documents\\BitBucket\\testapplication\\api\\obj\\",
+        "outputPath": "C:\\Users\\musou\\OneDrive\\Documents\\BitBucket\\testapplication\\API\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
           "C:\\Users\\musou\\AppData\\Roaming\\NuGet\\NuGet.Config"
@@ -37,6 +37,20 @@
       "frameworks": {
         "net6.0": {
           "targetAlias": "net6.0",
+          "dependencies": {
+            "Microsoft.AspNetCore.Authentication.Certificate": {
+              "target": "Package",
+              "version": "[6.0.9, )"
+            },
+            "Newtonsoft.Json": {
+              "target": "Package",
+              "version": "[13.0.1, )"
+            },
+            "Restsharp": {
+              "target": "Package",
+              "version": "[108.0.1, )"
+            }
+          },
           "imports": [
             "net461",
             "net462",

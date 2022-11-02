@@ -1,9 +1,5 @@
 namespace Platform.Models
 {
-    public class ListUsers
-    {
-        public List<User>? Users { get; set; }
-    }
     public class User
     {
         public string? Login { get; set; }
