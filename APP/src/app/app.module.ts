@@ -10,6 +10,7 @@ import { TableModule } from 'primeng/table';
 import { TooltipModule } from 'primeng/tooltip';
 import { AllUsersComponent } from './Components/all-users/all-users.component';
 import { UserDetailsComponent } from './Components/user-details/user-details.component';
+import { SharedService } from './Services/shared.service';
 
 @NgModule({
   declarations: [
@@ -26,7 +27,7 @@ import { UserDetailsComponent } from './Components/user-details/user-details.com
     TableModule,
     TooltipModule
   ],
-  providers: [],
+  providers: [SharedService],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

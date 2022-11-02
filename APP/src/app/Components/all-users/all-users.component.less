@@ -1,0 +1,51 @@
+h1 {
+    text-align: center;
+    margin-top: 4%;
+}
+.cnt-users {
+    text-align: -webkit-center;
+    .all-users {
+        display: flex;
+        justify-content: space-evenly;
+        flex-wrap: wrap;
+        max-width: 949px;
+        .box-user {
+            display: flex;
+            flex-direction: column;
+            padding: 15px;
+            background: lightgrey;
+            min-width: 160px;
+            text-align: left;
+            border-radius: 10px;
+            margin: 30px 0;
+            cursor: pointer;
+            .user-item {
+                font-size: 18px;
+            }
+        }
+    }
+}
+.buttons {
+    display: flex;
+    justify-content: center;
+    .previous-button {
+        margin-right: 50px;
+        display: flex;
+        flex-direction: column;
+        .previous-error-message {
+            font-size: 12px;
+            color: red;
+            padding-top: 10px;
+        }
+    }
+    button {
+        border-radius: 10px;
+        background: #00bd00;
+        border: none;
+        padding: 15px;
+        color: white;
+        cursor: pointer;
+        height: 60px;
+        width: 116.7px;
+    }
+}
