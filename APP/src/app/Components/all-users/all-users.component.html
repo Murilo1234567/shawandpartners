@@ -1,7 +1,7 @@
 <h1>Click on a user to see the details</h1>
 <div class="cnt-users">
     <div class="all-users">
-        <div class="box-user" *ngFor="let item of users">
+        <div class="box-user" *ngFor="let item of users" (click)="GoToDetails(item.login)">
             <span class="user-item"><b>Id:</b> {{item.id}}</span>
             <span class="user-item"><b>Login:</b> {{item.login}}</span>
         </div>

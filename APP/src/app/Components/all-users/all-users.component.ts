@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { Router } from '@angular/router';
 import { Subject, takeUntil } from 'rxjs';
 import { SharedService } from 'src/app/Services/shared.service';
 
@@ -12,7 +13,8 @@ export class AllUsersComponent implements OnInit {
   public isFirstPage: boolean = false;
   public ngUnsubscribe = new Subject<void>();
   constructor(
-    private _sharedService: SharedService
+    private _sharedService: SharedService,
+    private _router: Router
   ) { }
 
   ngOnInit(): void {
@@ -31,5 +33,9 @@ export class AllUsersComponent implements OnInit {
         }
       )
     }
-  }  
+  }
+
+  GoToDetails(id: number) {
+    this._router.navigate(['user/' + id.toString()]);
+  }
 }
