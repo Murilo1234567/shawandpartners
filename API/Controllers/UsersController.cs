@@ -12,7 +12,7 @@ namespace Platform.Controllers
     public class UsersController
     {
         [HttpGet("{id}")]
-        public ActionResult<List<User>> GetAllUsers(int id)
+        public ActionResult<List<User>> GetAllUsers(string id)
         {
             List<User> listUsers;
             string url = string.Format("https://api.github.com/users?per_page=12&since{0}", id);
