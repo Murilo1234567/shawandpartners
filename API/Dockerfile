@@ -12,4 +12,4 @@ FROM mcr.microsoft.com/dotnet/aspnet:6.0
 WORKDIR /API
 COPY --from=build-env /API/out .
 EXPOSE 5000/tcp
-ENTRYPOINT ["dotnet", "api.dll"]
+CMD ASPNETCORE_URLS=http://*:5000 dotnet api.dll
