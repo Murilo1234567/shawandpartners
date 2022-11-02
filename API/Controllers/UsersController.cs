@@ -15,7 +15,7 @@ namespace Platform.Controllers
         public ActionResult<List<User>> GetAllUsers(string id)
         {
             List<User> listUsers;
-            string url = string.Format("https://api.github.com/users?per_page=12&since{0}", id);
+            string url = string.Format("https://api.github.com/users?per_page=16&since={0}", id);
 
             var restClient = new RestClient(url);
             var restRequest = new RestRequest(url, Method.Get);
