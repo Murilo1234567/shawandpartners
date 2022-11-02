@@ -1,1 +1,39 @@
-<p>user-details works!</p>
+<h1>Check out the details!</h1>
+<div class="all-users">
+    <div class="box-user">
+        <span class="user-item"><b>Id: </b>{{user.id}}</span>
+        <span class="user-item"><b>Login: </b>{{user.login}}</span>
+        <span class="user-item"><b>Profile URL: </b> <a [href]="user.html_url" target="_blank">{{user.html_url}}</a></span>
+        <span class="user-item"><b>Creation Date: </b>{{user.created_at.split("T")[0]}}</span>
+    </div>
+</div>
+<h3>Look at this user Repositories!</h3>
+<div class="repos-table">
+    <p-table #dt styleClass="default_table" [columns]="colDefs" [autoLayout]="true" [resizableColumns]="true" [value]="repos" dataKey="_id" [responsive]="true" csvSeparator=";" [paginator]="true" [rows]="5">
+        <ng-template pTemplate="header" let-columns>
+            <tr>
+                <th *ngFor="let col of columns" [pSortableColumn]="col.field" pResizableColumn [ngStyle]="col.style">
+                    <span translate>{{col.header}}</span>
+                    <p-sortIcon [field]="col.field"></p-sortIcon>
+                </th>
+            </tr>
+        </ng-template>
+        <ng-template pTemplate="body" let-rowData let-columns="columns" let-rowIndex="rowIndex">
+            <tr>
+            <td *ngFor="let col of columns" class="p-resizable-column" [class.actions]="col.field ==='actions'">
+                <div [ngSwitch]="col.field">
+                <div class="item-table" *ngSwitchCase="'html_url'">
+                    <a [href]="rowData[col.field]" target="_blank">{{rowData[col.field] || 'N/I'}}</a>
+                </div>
+                <div class="item-table" *ngSwitchDefault>
+                    {{rowData[col.field] || 'N/I'}}
+                </div>
+                </div>
+            </td>
+            </tr>
+        </ng-template>
+  </p-table>
+</div>
+<div class="go-back">
+    <button [routerLink]="''">Back to Users</button>
+</div>
