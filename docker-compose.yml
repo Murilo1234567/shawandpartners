@@ -1,0 +1,25 @@
+version: '3'
+services:
+  dotnet-server:
+    build:
+      context: ./API
+      dockerfile: Dockerfile
+    environment:
+      - ASPNETCORE_ENVIRONMENT=Development
+      - ASPNETCORE_URLS=http://+:5000
+    ports:
+      - "5000:5000"
+    container_name: dotnet-api    
+    volumes:
+       - ./api:/usr/src/app/API
+       - /usr/src/app/API/*.csproj
+  angular-ui:
+    build:
+      context: ./APP
+      dockerfile: Dockerfile
+    ports:
+      - "4200:4200"
+    container_name: angular-ui
+    volumes:
+       - ./APP:/usr/src/app/APP
+       - /usr/src/app/APP/node_modules
